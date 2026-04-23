@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS S3 bucket name from a full S3 URI (e.g., 's3://my-bucket-name/path/to/object') and extract just the bucket name",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly extract the bucket name from various S3 URI formats, handle URIs with and without trailing paths, and reject invalid formats"
+  },
+  {
+    "task": "Write a Python function that validates whether a given string is a valid AWS IAM role ARN format",
+    "format": "python",
+    "solution_criteria": "The function should return True for valid ARNs like 'arn:aws:iam::123456789012:role/MyRole' and False for invalid formats, handling edge cases like missing account IDs or invalid partitions"
+  },
+  {
+    "task": "Create a JSON CloudFormation template snippet that defines an AWS Lambda execution role with basic permissions to write logs to CloudWatch",
+    "format": "json",
+    "solution_criteria": "The JSON should be valid CloudFormation syntax, include an IAM role resource with assume role policy for Lambda service, and attach a policy allowing logs:CreateLogGroup, logs:CreateLogStream, and logs:PutLogEvents actions"
+  }
+]
