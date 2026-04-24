@@ -1,0 +1,53 @@
+[
+  {
+    "output": "```json\n[\n  \"biomedical engineering\",\n  \"machine learning algorithms\",\n  \"diagnostic imaging\",\n  \"malignancy detection\",\n  \"convolutional neural networks\",\n  \"radiological datasets\",\n  \"algorithmic decision-making\",\n  \"healthcare systems\",\n  \"health disparities\",\n  \"marginalized communities\",\n  \"AI-driven triage protocols\",\n  \"socioeconomic disparities\",\n  \"ethical governance frameworks\",\n  \"interdisciplinary collaboration\",\n  \"computer science\",\n  \"clinical practice\",\n  \"equity in healthcare\",\n  \"epidemiology\",\n  \"policy\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in biomedical engineering have demonstrated the efficacy of machine learning algorithms in diagnostic imaging, particularly in detecting early-stage malignancies through convolutional neural networks trained on radiological datasets. Simultaneously, sociological research has examined how algorithmic decision-making in healthcare systems perpetuates existing health disparities among marginalized communities, with studies showing that AI-driven triage protocols disproportionately disadvantage patients from lower socioeconomic backgrounds. The integration of these technological and social dimensions raises critical questions about ethical governance frameworks, requiring interdisciplinary collaboration between computer scientists, clinicians, epidemiologists, and policy experts to ensure equitable implementation of such systems in clinical practice."
+      },
+      "solution_criteria": [
+        "Identifies topics spanning both technical domains (machine learning, diagnostic imaging, neural networks) and social science domains (health disparities, ethics, policy)",
+        "Extracts all distinct topics without duplicates",
+        "Returns output as a JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with interdisciplinary passage containing mixed technical and social science topics to verify accurate identification of multiple distinct topics across domains"
+    },
+    "score": 10,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage, with no extra commentary, and nothing else in the response. It also meets the secondary criteria by identifying topics across both technical and social domains, extracting distinct topics without duplicates, and maintaining proper JSON formatting. The topic selection is thorough and accurate, capturing key concepts from the passage including machine learning, diagnostic imaging, health disparities, ethical governance, and interdisciplinary collaboration. Minor variations in topic specificity are acceptable and do not constitute deficiencies."
+  },
+  {
+    "output": "```json\n[\n  \"machine learning\",\n  \"genomic sequencing analysis\",\n  \"disease biomarkers\",\n  \"deep neural networks\",\n  \"whole-genome association data\",\n  \"phenotypic variance prediction\",\n  \"statistical clustering\",\n  \"genetic ancestry\",\n  \"convolutional architectures\",\n  \"logistic regression\",\n  \"classification accuracy\",\n  \"computational complexity\",\n  \"model interpretability\",\n  \"clinical implementation\",\n  \"algorithmic bias\",\n  \"precision medicine\",\n  \"cross-validation\",\n  \"ethnic diversity\",\n  \"model generalization\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study investigates the intersection of machine learning methodologies and genomic sequencing analysis to identify disease biomarkers in heterogeneous populations. We employed deep neural networks trained on whole-genome association data to predict phenotypic variance, while simultaneously employing statistical clustering techniques to stratify patient cohorts by genetic ancestry. Our results demonstrate that convolutional architectures outperform traditional logistic regression models by 23% in classification accuracy, though computational complexity and interpretability challenges remain significant barriers to clinical implementation. Furthermore, we address ethical considerations surrounding algorithmic bias in precision medicine and propose a framework for cross-validation across diverse ethnic backgrounds to ensure equitable model generalization."
+      },
+      "solution_criteria": [
+        "Extraction must include both explicitly stated topics (machine learning, genomic sequencing, biomarkers) and implicitly mentioned areas (precision medicine, algorithmic bias, ethics)",
+        "Topics should be distinct research areas or concepts, not overly granular technical details",
+        "Output must be a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with dense, single-paragraph abstract containing implicit and explicit topics to assess extraction of both obvious and subtly mentioned research areas"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary. It successfully captures both explicitly stated topics (machine learning, genomic sequencing analysis, disease biomarkers, deep neural networks, etc.) and implicitly mentioned areas (algorithmic bias, precision medicine, cross-validation). The granularity is appropriate - topics represent distinct research areas rather than overly specific technical details. The main minor deficiency is the omission of 'ethics' as a standalone topic, which is explicitly mentioned in the passage as a key consideration. The solution demonstrates strong understanding of the source material and appropriate topic extraction methodology."
+  },
+  {
+    "output": "```json\n[\n  \"artificial intelligence\",\n  \"machine learning\",\n  \"deep learning\",\n  \"neural networks\",\n  \"convolutional neural networks\",\n  \"recurrent neural networks\",\n  \"computer vision\",\n  \"natural language processing\",\n  \"feature extraction\",\n  \"artificial neurons\",\n  \"support vector machines\",\n  \"decision trees\",\n  \"image classification\",\n  \"object detection\",\n  \"sequence modeling\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in artificial intelligence have been driven by breakthroughs in machine learning, particularly through the development of deep learning architectures. Neural networks, especially convolutional neural networks and recurrent neural networks, have revolutionized computer vision and natural language processing tasks. These deep learning models leverage hierarchical feature extraction through multiple layers of artificial neurons, enabling machines to automatically learn representations from raw data. While machine learning encompasses broader statistical learning methods including support vector machines and decision trees, deep learning has emerged as the dominant paradigm for achieving state-of-the-art performance in image classification, object detection, and sequence modeling applications."
+      },
+      "solution_criteria": [
+        "Extracts topics at appropriate granularity levels, distinguishing between broad categories (machine learning, artificial intelligence) and specific techniques (convolutional neural networks, recurrent neural networks)",
+        "Avoids excessive redundancy while capturing hierarchically related concepts as separate topics when they serve distinct roles in the text",
+        "Returns results as a JSON array of strings with clear, properly formatted topic labels"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passage containing overlapping or hierarchically related topics (e.g., 'machine learning', 'deep learning', 'neural networks') to evaluate whether the prompt extracts appropriately granular topic levels"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary. Regarding secondary criteria, it demonstrates appropriate granularity by distinguishing between broad categories and specific techniques while avoiding excessive redundancy. The extraction is comprehensive and well-formatted. The only minor issue is the inclusion of 'artificial neurons,' which functions more as a mechanism within neural networks rather than a distinct topic. This is a marginal concern that does not significantly detract from an otherwise excellent response that meets the stated criteria."
+  }
+]

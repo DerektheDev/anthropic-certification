@@ -1,0 +1,38 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in biomedical engineering have demonstrated the efficacy of machine learning algorithms in diagnostic imaging, particularly in detecting early-stage malignancies through convolutional neural networks trained on radiological datasets. Simultaneously, sociological research has examined how algorithmic decision-making in healthcare systems perpetuates existing health disparities among marginalized communities, with studies showing that AI-driven triage protocols disproportionately disadvantage patients from lower socioeconomic backgrounds. The integration of these technological and social dimensions raises critical questions about ethical governance frameworks, requiring interdisciplinary collaboration between computer scientists, clinicians, epidemiologists, and policy experts to ensure equitable implementation of such systems in clinical practice."
+    },
+    "solution_criteria": [
+      "Identifies topics spanning both technical domains (machine learning, diagnostic imaging, neural networks) and social science domains (health disparities, ethics, policy)",
+      "Extracts all distinct topics without duplicates",
+      "Returns output as a JSON array of strings"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with interdisciplinary passage containing mixed technical and social science topics to verify accurate identification of multiple distinct topics across domains"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in artificial intelligence have been driven by breakthroughs in machine learning, particularly through the development of deep learning architectures. Neural networks, especially convolutional neural networks and recurrent neural networks, have revolutionized computer vision and natural language processing tasks. These deep learning models leverage hierarchical feature extraction through multiple layers of artificial neurons, enabling machines to automatically learn representations from raw data. While machine learning encompasses broader statistical learning methods including support vector machines and decision trees, deep learning has emerged as the dominant paradigm for achieving state-of-the-art performance in image classification, object detection, and sequence modeling applications."
+    },
+    "solution_criteria": [
+      "Extracts topics at appropriate granularity levels, distinguishing between broad categories (machine learning, artificial intelligence) and specific techniques (convolutional neural networks, recurrent neural networks)",
+      "Avoids excessive redundancy while capturing hierarchically related concepts as separate topics when they serve distinct roles in the text",
+      "Returns results as a JSON array of strings with clear, properly formatted topic labels"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with passage containing overlapping or hierarchically related topics (e.g., 'machine learning', 'deep learning', 'neural networks') to evaluate whether the prompt extracts appropriately granular topic levels"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study investigates the intersection of machine learning methodologies and genomic sequencing analysis to identify disease biomarkers in heterogeneous populations. We employed deep neural networks trained on whole-genome association data to predict phenotypic variance, while simultaneously employing statistical clustering techniques to stratify patient cohorts by genetic ancestry. Our results demonstrate that convolutional architectures outperform traditional logistic regression models by 23% in classification accuracy, though computational complexity and interpretability challenges remain significant barriers to clinical implementation. Furthermore, we address ethical considerations surrounding algorithmic bias in precision medicine and propose a framework for cross-validation across diverse ethnic backgrounds to ensure equitable model generalization."
+    },
+    "solution_criteria": [
+      "Extraction must include both explicitly stated topics (machine learning, genomic sequencing, biomarkers) and implicitly mentioned areas (precision medicine, algorithmic bias, ethics)",
+      "Topics should be distinct research areas or concepts, not overly granular technical details",
+      "Output must be a valid JSON array of strings"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with dense, single-paragraph abstract containing implicit and explicit topics to assess extraction of both obvious and subtly mentioned research areas"
+  }
+]
